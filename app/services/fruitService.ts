@@ -1,7 +1,7 @@
-import { Fruit } from "../types/Fruit";
+import { get } from "./serviceBase";
 
-export const getFruits = async () => {
-  const response = await fetch("https://www.fruityvice.com/api/fruit/all");
-  const data: Fruit[] = await response.json();
-  return data;
-};
+const BASE_URL = "https://www.fruityvice.com/api/fruit/";
+
+export const getFruits = async () => get(`${BASE_URL}all`);
+
+export const getFruitById = async (id: string) => get(`${BASE_URL}${id}`);
