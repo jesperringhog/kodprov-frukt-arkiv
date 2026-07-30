@@ -5,8 +5,8 @@ import Link from "next/link";
 import { FruitsCalculation } from "./components/FruitsCalculation";
 
 export default async function Home() {
-  const fruits: Fruit[] = await getFruits();
-
+  const fruits = await getFruits();
+ 
   return (
     <section className="flex flex-col items-center gap-5">
       <FruitsCalculation fruits={fruits} />

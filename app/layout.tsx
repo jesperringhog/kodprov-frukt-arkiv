@@ -31,7 +31,7 @@ export default function RootLayout({
       <body className="min-h-full flex flex-col">
         <Header />
         <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-          <main className="w-full p-10 flex flex-1 flex-col items-center bg-amber-100 dark:bg-black sm:items-start">
+          <main className="w-full p-10 flex flex-1 flex-col items-center bg-amber-100 dark:bg-zinc-800 text-black sm:items-start">
             {children}
           </main>
         </div>

@@ -25,7 +25,7 @@ export const FruitCard = ({
       {fruit.image ? (
         <Image src={fruit.image} alt={fruit.name} width={100} height={100} />
       ) : (
-        "🍎"
+        <p className="grayscale">🍎</p>
       )}
     </div>
   </>
