@@ -9,14 +9,19 @@ export default async function Home() {
 
   return (
     <section className="flex flex-col items-center gap-5">
-      <FruitsCalculation fruits={fruits}/>
+      <FruitsCalculation fruits={fruits} />
       <div className="flex flex-wrap justify-center gap-5">
         {fruits.map((f) => (
-          <div key={f.id} className="w-60 h-80 p-10 flex flex-col gap-5 border">
-            <FruitCard fruit={f} />
+          <div key={f.id} className="w-60 h-80 flex flex-col">
+            <FruitCard
+              fruit={f}
+              nameContainerClass="rounded-t-xl"
+              imgContainerClass="h-full"
+            />
             <Link
               href={`/fruits/${f.id}`}
-              className="p-3 bg-black text-white text-center"
+              className="p-5 bg-green-300 hover:bg-white text-center 
+              rounded-b-xl transition-colors duration-300"
             >
               Details
             </Link>

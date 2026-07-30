@@ -1,4 +1,17 @@
+import React from "react";
 import { Fruit } from "../types/Fruit";
+
+type InfoContainerProps = {
+  title: string;
+  value: number;
+};
+
+const InfoContainer = ({ title, value }: InfoContainerProps) => (
+  <div className="p-10 bg-white rounded-xl">
+    <h3>{title}</h3>
+    <strong>{value}</strong>
+  </div>
+);
 
 type FruitsCalculationProps = {
   fruits: Fruit[];
@@ -13,15 +26,9 @@ export const FruitsCalculation = ({ fruits }: FruitsCalculationProps) => {
   );
 
   return (
-    <article className="flex gap-10">
-      <div>
-        <h3>Fruits total:</h3>
-        <strong>{fruitsTotal}</strong>
-      </div>
-      <div>
-        <h3>Average calories:</h3>
-        <strong>{averageCalories}</strong>
-      </div>
+    <article className="flex flex-col md:flex-row gap-5">
+      <InfoContainer title="Fruits total:" value={fruitsTotal} />
+      <InfoContainer title="Average calories:" value={averageCalories} />
     </article>
   );
 };
