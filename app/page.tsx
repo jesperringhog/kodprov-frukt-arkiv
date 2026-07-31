@@ -1,5 +1,4 @@
 import { getFruits } from "./services/fruitService";
-import { Fruit } from "./types/Fruit";
 import { FruitCard } from "./components/FruitCard";
 import Link from "next/link";
 import { FruitsCalculation } from "./components/FruitsCalculation";

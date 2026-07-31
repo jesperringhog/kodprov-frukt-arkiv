@@ -1,4 +1,3 @@
-import React from "react";
 import { Fruit } from "../types/Fruit";
 
 type InfoContainerProps = {
